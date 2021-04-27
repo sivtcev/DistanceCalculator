@@ -1,0 +1,17 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db.changelog/db.changelog-master.xml
+  datasource:
+    url: jdbc:${CLEARDB_DATABASE_URL:mysql://${MYSQL_HOST:localhost}:3306/distance-calculator?createDatabaseIfNotExist=true}
+    initialization-mode: never
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MySQL8Dialect
+  h2:
+    console:
+      enabled: true
