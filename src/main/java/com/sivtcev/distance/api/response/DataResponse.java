@@ -11,6 +11,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ListResponse<T> {
+public class DataResponse<T> {
     List<T> data;
 }
