@@ -59,7 +59,7 @@ public class CityServiceTest {
     @Test
     void uploadCitiesFromXMLTest() {
         try {
-            File file = new File("src/test/resources/data_example.xml");
+            File file = new File("src/test/resources/file.xml");
             FileInputStream input = new FileInputStream(file);
             MultipartFile multipartFile = new MockMultipartFile("file", file.getName(), "text/plain", IOUtils.toByteArray(input));
             cityService.uploadCitiesFromXml(multipartFile);
