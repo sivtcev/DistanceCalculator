@@ -16,7 +16,7 @@ public class CityResponse {
     private String name;
 
     public CityResponse(City city) {
-        this.id = city.getCity_id();
+        this.id = city.getCityId();
         this.name = city.getName();
     }
 

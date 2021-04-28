@@ -20,6 +20,6 @@ public class CityRepositoryTest {
 
         City result = cityRepository.getFirstByName("city");
 
-        assertEquals("correct result", 1L, result.getCity_id());
+        assertEquals("correct result", 1L, result.getCityId());
     }
 }

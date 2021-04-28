@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
@@ -17,9 +17,9 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AncillaryEntity {
 
-    @XmlElementWrapper(name= "cities", nillable = true, required = true)
-    private List<City> cityList;
+    @XmlElement(name = "city", nillable = true)
+    private List<City> cityList = null;
 
-    @XmlElementWrapper(name= "distances", nillable = true, required = true)
-    private List<Distance> distanceList;
+    @XmlElement(name = "distance", nillable = true)
+    private List<Distance> distanceList = null;
 }
