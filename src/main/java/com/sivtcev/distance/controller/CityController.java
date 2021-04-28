@@ -2,6 +2,7 @@ package com.sivtcev.distance.controller;
 
 import com.sivtcev.distance.api.response.CityResponse;
 import com.sivtcev.distance.api.response.DataResponse;
+import com.sivtcev.distance.api.response.EmptyResponse;
 import com.sivtcev.distance.service.CityService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -24,8 +25,9 @@ public class CityController {
     }
 
     @PutMapping(value = "/city", produces = {"application/json", "application/xml"}, consumes = "multipart/form-data")
-    public void uploadCitiesFromXml(@RequestParam(name = "file") MultipartFile file) {
-
+    public ResponseEntity<EmptyResponse> uploadCitiesFromXml(@RequestParam(name = "file") MultipartFile file) {
+        cityService.uploadCitiesFromXml(file);
+        return ResponseEntity.ok(new EmptyResponse());
     }
 }
 
