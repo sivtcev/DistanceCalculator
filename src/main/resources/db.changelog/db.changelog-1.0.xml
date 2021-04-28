@@ -12,10 +12,10 @@
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="latitude" type="point">
+            <column name="latitude" type="double">
                 <constraints nullable="false"/>
             </column>
-            <column name="longitude" type="point">
+            <column name="longitude" type="double">
                 <constraints nullable="false"/>
             </column>
         </createTable>

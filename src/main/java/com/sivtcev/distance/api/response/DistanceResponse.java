@@ -17,15 +17,9 @@ public class DistanceResponse {
     private String cityFrom;
     @JsonProperty(value = "city_to")
     private String cityTo;
-    @JsonProperty(value = "distance_crowfright")
-    private double distanceCrowfright;
-    @JsonProperty(value = "distance_distance_matrix")
-    private double distanceDistanceMatrix;
-
-    public DistanceResponse(Distance distance) {
-        this.cityFrom = distance.getFromCity().getName();
-        this.cityTo = distance.getToCity().getName();
-        this.distanceDistanceMatrix = distance.getDistance();
-    }
+    @JsonProperty(value = "distance_crow_fright")
+    private Double distanceCrowFright;
+    @JsonProperty(value = "distance_matrix")
+    private Double distanceMatrix;
 
 }

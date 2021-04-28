@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CalculationType {
 
-    CROWFLIGHT("crowflight"),
+    CROW_FLIGHT("crow_flight"),
     DISTANCE_MATRIX("distance_matrix"),
     ALL("all");
 

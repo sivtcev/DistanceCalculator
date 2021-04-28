@@ -1,5 +1,6 @@
 package com.sivtcev.distance.model;
 
+import liquibase.pro.packaged.D;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,13 +21,13 @@ public class City {
     @Column(name = "name", nullable = false, columnDefinition = "VARCHAR(50)")
     private String name;
 
-    @Column(name = "latitude", nullable = false, columnDefinition = "POINT")
-    private String latitude;
+    @Column(name = "latitude", nullable = false, columnDefinition = "DOUBLE")
+    private Double latitude;
 
-    @Column(name = "longitude", nullable = false, columnDefinition = "POINT")
-    private String longitude;
+    @Column(name = "longitude", nullable = false, columnDefinition = "DOUBLE")
+    private Double longitude;
 
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "distance", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private Set<Distance> distances;
 
 }
