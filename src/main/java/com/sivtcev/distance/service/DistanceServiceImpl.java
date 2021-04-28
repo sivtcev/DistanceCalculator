@@ -82,6 +82,7 @@ public class DistanceServiceImpl implements DistanceService {
             double distance = cityFrom.equals(cityTo) ? 0D : distanceRepository.findMatrixDistanceByCitiesNames(cityFrom, cityTo);
             distanceResponseList.add(new DistanceResponse(cityFrom, cityTo, null, distance));
         }
+        System.gc();
         return distanceResponseList;
     }
 

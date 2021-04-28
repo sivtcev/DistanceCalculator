@@ -47,7 +47,7 @@ public class CityServiceImpl implements CityService {
             distanceRepository.saveAll(ancillaryEntity.getDistanceList());
 
         } catch (Exception e){
-            throw new BadRequestException("problem with file upload");
+            throw new BadRequestException("problem with file upload" + e.getLocalizedMessage());
         }
     }
 }

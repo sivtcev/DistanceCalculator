@@ -1,6 +1,5 @@
 package com.sivtcev.distance.model;
 
-import liquibase.pro.packaged.D;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
