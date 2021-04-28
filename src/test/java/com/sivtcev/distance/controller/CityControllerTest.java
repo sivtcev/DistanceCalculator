@@ -1,12 +1,9 @@
 package com.sivtcev.distance.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sivtcev.distance.ControllerTestConfiguration;
-import com.sivtcev.distance.ServiceTestConfiguration;
 import com.sivtcev.distance.api.response.CityResponse;
 import com.sivtcev.distance.api.response.DataResponse;
 import com.sivtcev.distance.service.CityService;
-import com.sivtcev.distance.service.DistanceService;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -28,8 +25,6 @@ public class CityControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-    @Autowired
-    private ObjectMapper objectMapper;
     @MockBean
     private CityService cityService;
 
