@@ -7,6 +7,7 @@ import com.sivtcev.distance.service.DistanceService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class DistanceController {
 
     final private DistanceService distanceService;
 
-    @GetMapping("/distance")
+    @PostMapping("/distance")
     public ResponseEntity<DataResponse<DistanceResponse>> calculateDistance(@RequestBody DistanceRequest distanceRequest) {
         return ResponseEntity.ok(distanceService.calculateDistance(distanceRequest));
     }
